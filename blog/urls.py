@@ -2,9 +2,8 @@ from django.urls import path
 
 from blog.views import BlogListView, BlogDetailView, BlogCreateView, BlogUpdateView, BlogDeleteView
 from catalog.apps import CatalogConfig
+
 from catalog.views import CatalogContactsView
-
-
 
 app_name = CatalogConfig.name
 
