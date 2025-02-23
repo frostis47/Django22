@@ -3,8 +3,6 @@ from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse_lazy, reverse
 from .forms import BlogForm
 from .models import Blog
-
-
 from django.shortcuts import render
 
 

@@ -1,14 +1,19 @@
 from django import forms
-from .models import Product, Category
+from .models import Blog, Product, Category
 
-
-class ProductForm(forms.Form):
+class BlogForm(forms.ModelForm):
     class Meta:
-        model = Product
+        model = Blog
         fields = ['title', 'content', 'image', 'created_at', 'publication_sign', 'count_of_views']
 
 
-class CategorytForm(forms.Form):
+class ProductForm(forms.ModelForm):  # Изменено на ModelForm
+    class Meta:
+        model = Product
+        fields = ['name', 'description', 'image', 'price', 'category']  # Убедитесь, что поля соответствуют модели
+
+
+class CategoryForm(forms.ModelForm):  # Исправлено название класса
     class Meta:
         model = Category
         fields = ['name', 'description']

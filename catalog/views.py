@@ -8,8 +8,6 @@ from catalog.models import Product
 
 
 
-
-
 class HomeListView(ListView):
     model = Product
     template_name = 'catalog/base.html'
@@ -30,19 +28,15 @@ def contacts(request):
     return render(request, 'contacts.html')
 
 
-def get(request):
-    return render(request, 'catalog/contacts.html')
-
-
-def post(request):
-
-    name = request.POST.get('name')
-    request.POST.get('message')
-    return HttpResponse(f"Спасибо, {name}! Ваше сообщение получено.")
-
-
 class CatalogContactsView(View):
-    pass
+    def get(self, request):
+        return render(request, 'catalog/contacts.html')
+
+    def post(self, request):
+        #Получение данных из формы
+        name = request.POST.get('name')
+        request.POST.get('message')
+        return HttpResponse(f"Спасибо, {name}! Ваше сообщение получено.")
 
 
 class ProductDetailView(DetailView):
