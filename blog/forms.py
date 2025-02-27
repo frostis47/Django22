@@ -1,7 +1,9 @@
 from django import forms
 from .models import Blog
+from django.core.exceptions import ValidationError
 
-class BlogForm(forms.ModelForm):
+
+class BlogForm(forms.Form):
     class Meta:
         model = Blog
-        fields = ['title', 'content', 'image', 'publication_sign']
+        exclude = ("count_of_views",)
