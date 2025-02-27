@@ -1,8 +1,8 @@
-{% extends 'home.html'%}
+{% extends 'catalog/home.html'%}
 {% block content %}
 <div class="container">
     <div class="row text-center">
-        {% for product in products %}
+        {% for product in object_list %}
         <div class="col-3">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
@@ -14,7 +14,7 @@
                         <li>- {{ product.description|truncatechars:100 }}</li>
                     </ul>
                     <div class="btn-group">
-                        <a class="btn btn-primary" href="{% url 'catalog:product_detail' product.pk %}">Подробно</a>
+                      <a class="btn btn-primary" href="{% url 'catalog:product_detail' product.pk %}">Подробно</a>
                     </div>
                 </div>
             </div>
