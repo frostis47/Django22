@@ -1,8 +1,6 @@
-
 from django.db import models
 from pygments.lexer import default
 
-# Create your models here.
 
 
 class Blog(models.Model):
