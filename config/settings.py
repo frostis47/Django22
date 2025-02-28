@@ -8,15 +8,12 @@ load_dotenv(override=True)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 SECRET_KEY = 'django-insecure-vomxzt+c+g)6pj$wzgb(*d40_z3p8fvk#((m61xz-grvvf-zt#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
 ALLOWED_HOSTS = ["*"]
-
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -25,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     "catalog",
     'blog',
     'users',
@@ -58,11 +56,7 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'config.wsgi.application'
-
-
-
 
 DATABASES = {
     'default': {
@@ -74,8 +68,6 @@ DATABASES = {
         'PORT': os.getenv('PORT'),
     }
 }
-
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -109,11 +101,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static",]
-
+STATICFILES_DIRS = [BASE_DIR / "static", ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
