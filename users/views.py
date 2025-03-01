@@ -1,9 +1,12 @@
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
+
+
 from users.forms import UserRegistrationForm
 from users.models import User
 from django.conf import settings
+
 
 class RegisterView(CreateView):
     model = User
