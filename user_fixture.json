@@ -1,0 +1,65 @@
+[ {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$dHBFxQ16gZbm3Rq4YEnfSU$Y1SHJwknyB8esB5pi2PUFxfb2MHXk/5//3IuV3zmGb8=",
+      "last_login": "2025-03-03T16:38:44.622Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-03-03T12:37:14Z",
+      "email": "admin@example.com",
+      "avatar": "",
+      "phone_number": null,
+      "country": null,
+      "groups": [
+        3
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "1234567890",
+      "last_login": "2025-03-03T15:54:54Z",
+      "is_superuser": false,
+      "first_name": "Андрей",
+      "last_name": "Яковлев",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-03-03T15:54:23Z",
+      "email": "admin47@sky.com",
+      "avatar": "",
+      "phone_number": null,
+      "country": "Россия",
+      "groups": [
+        4
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$Ju0sYyBFWWRl5UGLSCdJny$9JOXL2Bs16jJurB5CrV2fCgUVsIEIDAy67Zm5buDFgA=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-03-03T16:40:33.219Z",
+      "email": "admin47@yandex.ru",
+      "avatar": "",
+      "phone_number": null,
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
