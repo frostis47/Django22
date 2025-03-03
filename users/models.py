@@ -25,7 +25,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 class User(AbstractUser):
-    username = None  # Убираем поле username
+    username = None
     email = models.EmailField(unique=True, verbose_name="Эл.почта")
     avatar = models.ImageField(upload_to='users/avatars', blank=True, null=True, verbose_name='Аватар',
                                help_text='Загрузите фотографию')
@@ -34,9 +34,9 @@ class User(AbstractUser):
                                help_text="Введите страну проживания")
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []  # Указываем, что дополнительных полей нет
+    REQUIRED_FIELDS = []
 
-    objects = CustomUserManager()  # Указываем кастомный менеджер
+    objects = CustomUserManager()
 
     def __str__(self):
         return self.email
