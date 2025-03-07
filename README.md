@@ -6,3 +6,4 @@
 
 ### Установка:
 1. Клонируйте репозиторий:
+https://github.com/frostis47/Django22
